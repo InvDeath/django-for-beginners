@@ -1,0 +1,42 @@
+---
+
+- name: vagrant provisioning
+  vars:
+    project_root: '/home/vagrant/share'
+    venv_path: '/home/vagrant/venv'
+  hosts: development
+  connection: local
+  tasks:
+  - name: install packages
+    sudo: yes
+    apt: name={{ item }} state=latest update_cache=no
+    with_items:
+      - python-pip
+      - python3-dev
+      - gettext
+      - python-dev
+      - libjpeg-dev
+      - libfreetype6-dev
+      - zlib1g-dev
+      - redis-server
+      - memcached
+
+  - name: create venv
+    command: creates={{ venv_path }} virtualenv {{ venv_path }} -p python3 --always-copy
+
+  - name: install requirements
+    pip:
+      requirements={{ project_root }}/requirements/dev.txt
+      virtualenv={{ venv_path }}
+
+  - name: create app folder
+    command: creates={{ project_root }}/app mkdir {{ project_root }}/app
+
+  - name: django start app
+    command: creates={{ project_root }}/app/app {{ venv_path }}/bin/django-admin.py startproject app {{ project_root }}/app
+
+  - name: deploy app
+    django_manage:
+      command=migrate
+      app_path={{ project_root }}/app
+      virtualenv={{ venv_path }}

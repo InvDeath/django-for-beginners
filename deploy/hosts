@@ -1,0 +1,4 @@
+local_main ansible_ssh_host=127.0.0.1
+
+[development]
+local_main
