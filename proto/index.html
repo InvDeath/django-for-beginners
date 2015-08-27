@@ -26,100 +26,293 @@
   <div id="sub-header" class="row">
     <div class="col-xs-12">
       <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#">Студенти</a></li>
-        <li role="presentation"><a href="#">Відвідування</a></li>
-        <li role="presentation"><a href="#">Групи</a></li>
+        <li role="presentation" class="active"><a href="#students" aria-controls="students" role="tab"
+                                                  data-toggle="tab">Студенти</a></li>
+        <li role="presentation"><a href="#calendar" aria-controls="calendar" role="tab"
+                                   data-toggle="tab">Відвідування</a></li>
+        <li role="presentation"><a href="#groups" aria-controls="groups" role="tab" data-toggle="tab">Групи</a></li>
       </ul>
     </div>
   </div>
   <div id="content-columns" class="row">
-    <div id="content-column" class="col-xs-12">
+    <div id="content-column" class="col-xs-12 tab-content">
       <div class="alert alert-warning">Зміни скасовано</div>
-      <h1>База студентів</h1>
-      <a href="#" class="btn btn-primary">Додати Студента</a>
-      <table class="table table-hover table-striped">
-        <thead>
-        <tr>
-          <th>№</th>
-          <th>Фото</th>
-          <th>Прізвище</th>
-          <th>Ім’я</th>
-          <th>№ Білету</th>
-          <th>Дії</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td><img src="http://lorempixel.com/30/30/people" alt="Фото" width="30" height="30" class="img-circle"/></td>
-          <td><a href="#" title="Редагувати">Корост</a></td>
-          <td><a href="#" title="Редагувати">Андрій</a></td>
-          <td>2123</td>
-          <td>
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                Дія
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td><img src="http://lorempixel.com/30/30/people" alt="Фото" width="30" height="30" class="img-circle"/></td>
-          <td><a href="#" title="Редагувати">Корост</a></td>
-          <td><a href="#" title="Редагувати">Андрій</a></td>
-          <td>2123</td>
-          <td>
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                Дія
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td><img src="http://lorempixel.com/30/30/people" alt="Фото" width="30" height="30" class="img-circle"/></td>
-          <td><a href="#" title="Редагувати">Корост</a></td>
-          <td><a href="#" title="Редагувати">Андрій</a></td>
-          <td>2123</td>
-          <td>
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                Дія
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        </thead>
-      </table>
-      <nav>
-        <ul class="pagination">
-          <li><a href="#">&laquo;</a></li>
-          <li><a href="#">1</a></li>
-          <li class="active"><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </nav>
+      <div role="tabpanel" class="active tab-pane" id="students">
+        <h1>База студентів</h1>
+        <a href="#" class="btn btn-primary">Додати Студента</a>
+        <table class="table table-hover table-striped">
+          <thead>
+          <tr>
+            <th>№</th>
+            <th>Фото</th>
+            <th>Прізвище</th>
+            <th>Ім’я</th>
+            <th>№ Білету</th>
+            <th>Дії</th>
+          </tr>
+          </thead>
+          <tr>
+            <td>1</td>
+            <td><img src="http://lorempixel.com/30/30/people" alt="Фото" width="30" height="30" class="img-circle"/>
+            </td>
+            <td><a href="#" title="Редагувати">Корост</a></td>
+            <td><a href="#" title="Редагувати">Андрій</a></td>
+            <td>2123</td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                  Дія
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><img src="http://lorempixel.com/30/30/people" alt="Фото" width="30" height="30" class="img-circle"/>
+            </td>
+            <td><a href="#" title="Редагувати">Корост</a></td>
+            <td><a href="#" title="Редагувати">Андрій</a></td>
+            <td>2123</td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                  Дія
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><img src="http://lorempixel.com/30/30/people" alt="Фото" width="30" height="30" class="img-circle"/>
+            </td>
+            <td><a href="#" title="Редагувати">Корост</a></td>
+            <td><a href="#" title="Редагувати">Андрій</a></td>
+            <td>2123</td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                  Дія
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
+                  <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <nav>
+          <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="calendar">
+        <h1>Облік відвідування</h1>
+        <center><a href="#">&larr;</a> Жовтень 2014 <a href="#">&rarr;</a></center>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Студент</th>
+            <th>Ср 1</th>
+            <th>Чт 2</th>
+            <th>Пт 3</th>
+            <th>Сб 4</th>
+            <th>Нд 5</th>
+            <th>Пн 6</th>
+            <th>Вт 7</th>
+            <th>Ср 8</th>
+            <th>Чт 9</th>
+            <th>Пт 10</th>
+            <th>Сб 11</th>
+            <th>Нд 12</th>
+            <th>Пн 13</th>
+            <th>Вт 14</th>
+            <th>Ср 15</th>
+            <th>Чт 16</th>
+            <th>Пт 17</th>
+            <th>Сб 18</th>
+            <th>Нд 19</th>
+            <th>Пн 20</th>
+            <th>Вт 21</th>
+            <th>Ср 22</th>
+            <th>Чт 23</th>
+            <th>Пт 24</th>
+            <th>Сб 25</th>
+            <th>Нд 26</th>
+            <th>Пн 27</th>
+            <th>Вт 28</th>
+            <th>Ср 29</th>
+            <th>Чт 30</th>
+            <th>Пт 31</th>
+          </tr>
+          </thead>
+          <tr>
+            <td>1</td>
+            <td><a href="#">Вася Верен</a></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="#">Сеня Порч</a></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><a href="#">Юра Пекун</a></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><a href="#">Моня Ипова</a></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+            <td><input type="checkbox"/></td>
+          </tr>
+
+        </table>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="groups">
+      </div>
     </div>
   </div>
   <div id="footer" class="row">
