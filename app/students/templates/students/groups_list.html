@@ -16,37 +16,29 @@
       </tr>
       </thead>
       {% for group in groups %}
-      <tr>
-        <td>{{ forloop.counter }}</td>
-        <td><a href="{% url 'groups_edit' group.id %}">{{ group.title }}</a></td>
-        <td><a href="{% url 'groups_edit' group.id %}" title="Редагувати">
-          {{ group.leader.first_name }} {{ group.leader.last_name }}
-        </a></td>
-        <td>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-              Дія
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li role="presentation"><a href="{% url 'groups_edit' group.id %}" role="menuitem" tabindex="-1">Редагувати</a></li>
-              <li role="presentation"><a href="{% url 'groups_delete' group.id %}" role="menuitem" tabindex="-1">Видалити</a></li>
-            </ul>
-          </div>
-        </td>
-      </tr>
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td><a href="{% url 'groups_edit' group.id %}">{{ group.title }}</a></td>
+          <td><a href="{% url 'groups_edit' group.id %}" title="Редагувати">
+            {{ group.leader.first_name }} {{ group.leader.last_name }}
+          </a></td>
+          <td>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                Дія
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li role="presentation"><a href="{% url 'groups_edit' group.id %}" role="menuitem" tabindex="-1">Редагувати</a>
+                </li>
+                <li role="presentation"><a href="{% url 'groups_delete' group.id %}" role="menuitem" tabindex="-1">Видалити</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr>
       {% endfor %}
     </table>
-    <nav>
-      <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li class="active"><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
-      </ul>
-    </nav>
+    {% include 'students/includes/pagination.html' %}
   </div>
 {% endblock %}
