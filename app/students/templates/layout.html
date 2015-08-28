@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% load staticfiles %}
-
-{% block css %}
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-{% endblock %}
-
 {% block layout %}
-  {% block content %}{% endblock %}
+  <div class="container">
+    {% block content %}{% endblock %}
+    <div id="footer" class="row">
+      <div class="col-xs-12">&copy; 2014 Сервіс Обліку Студентів</div>
+    </div>
+  </div>
+
 {% endblock %}

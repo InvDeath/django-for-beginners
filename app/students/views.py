@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def index(request):
     students = (
@@ -34,8 +34,18 @@ def index(request):
 def add_student(request):
     return render(request, 'students/student_edit.html', {})
 
-def edit_student(request):
-    pass
+def edit_student(request, sid):
+    return render(request, 'students/student_edit.html', {})
 
-def delete_student(request):
-    pass
+def delete_student(request, sid):
+    return redirect('index')
+
+
+def add_group(request):
+    return render(request, 'students/group_edit.html', {})
+
+def edit_group(request, gid):
+    return render(request, 'students/group_edit.html', {})
+
+def delete_group(request, gid):
+    return redirect('index')

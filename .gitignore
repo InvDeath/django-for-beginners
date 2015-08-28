@@ -2,4 +2,4 @@
 *.pyc
 .idea
 *.sqlite3
-/public
+app/public

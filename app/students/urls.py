@@ -19,4 +19,10 @@ from django.conf.urls import include, url
 urlpatterns = [
     url(r'^$', 'students.views.index', name='index'),
     url(r'^add_student/$', 'students.views.add_student', name='add_student'),
+    url(r'^edit_student/(?P<sid>\d+)$', 'students.views.edit_student', name='edit_student'),
+    url(r'^delete_student/(?P<sid>\d+)$', 'students.views.delete_student', name='delete_student'),
+
+    url(r'^add_group/$', 'students.views.add_group', name='add_group'),
+    url(r'^edit_group/(?P<gid>\d+)$', 'students.views.edit_group', name='edit_group'),
+    url(r'^delete_group/(?P<gid>\d+)$', 'students.views.delete_group', name='delete_group'),
 ]
