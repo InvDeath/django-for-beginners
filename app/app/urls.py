@@ -17,7 +17,13 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', 'students.views.index', name='index'),
-    url(r'^students/', include('students.urls', namespace='students')),
+    url(r'^$', 'students.views.students_list', name='home'),
+    url(r'^journal/', 'students.views.journal', name='journal'),
+    url(r'^groups/', 'students.views.groups_list', name='groups'),
+
+    url(r'^students/add$', 'students.views.add_student', name='add_student'),
+    url(r'^students/(?P<sid>\d+)/edit$', 'students.views.edit_student', name='edit_student'),
+    url(r'^students/(?P<sid>\d+)/delete$', 'students.views.delete_student', name='delete_student'),
+
     url(r'^admin/', include(admin.site.urls)),
 ]

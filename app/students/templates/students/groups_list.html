@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}Групи{% endblock %}
+
+{% block content %}
+  <div role="tabpanel" id="groups">
+    <a href="#" class="btn btn-primary">Додати Групу</a>
+    <table class="table table-hover table-striped">
+      <thead>
+      <tr>
+        <th>№</th>
+        <th>Назва</th>
+        <th>Староста</th>
+        <th>Дії</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>1</td>
+        <td><a href="#">ДЛ-454</a></td>
+        <td><a href="#" title="Редагувати">Корост Андрій</a></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              Дія
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
+            </ul>
+          </div>
+        </td>
+
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="#">ДЛ-444</a></td>
+        <td><a href="#" title="Редагувати">Корост Аким</a></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              Дія
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
+            </ul>
+          </div>
+        </td>
+
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="#">ДЛ-554</a></td>
+        <td><a href="#" title="Редагувати">Перен Вася</a></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+              Дія
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Відвідування</a></li>
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Редагувати</a></li>
+              <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Видалити</a></li>
+            </ul>
+          </div>
+        </td>
+
+      </tr>
+    </table>
+    <nav>
+      <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </nav>
+  </div>
+{% endblock %}

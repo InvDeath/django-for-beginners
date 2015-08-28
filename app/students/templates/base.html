@@ -12,7 +12,46 @@
   {% block extra_css %}{% endblock %}
 </head>
 <body>
-{% block layout %}{% endblock %}
+<div class="container">
+  <div id="header" class="row">
+    <div class="col-xs-8">
+      <h1>Сервіс обліку студентів</h1>
+    </div>
+    <div id="group-selector" class="col-xs-4">
+      <strong>Група:</strong>
+      <select title="Вибір групи">
+        <option value="">Усі Студенти</option>
+        <option value="">Перша група</option>
+        <option value="">Друга група</option>
+      </select>
+    </div>
+  </div>
+  <div id="sub-header" class="row">
+    <div class="col-xs-12">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" {% if request.path == '/' %}class="active"{% endif %}>
+          <a href="{% url 'home' %}">Студенти</a>
+        </li>
+        <li role="presentation" {% if '/journal' in request.path %}class="active"{% endif %}>
+          <a href="{% url 'journal' %}">Відвідування</a>
+        </li>
+        <li role="presentation" {% if '/groups' in request.path %}class="active"{% endif %}>
+          <a href="{% url 'groups' %}">Групи</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="content-columns" class="row">
+    <div id="content-column" class="col-xs-12 tab-content">
+      <div class="alert alert-warning">Зміни скасовано</div>
+      <h1>{% block title %}{% endblock %}</h1>
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+  <div id="footer" class="row">
+    <div class="col-xs-12">&copy; 2014 Сервіс Обліку Студентів</div>
+  </div>
+</div>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
