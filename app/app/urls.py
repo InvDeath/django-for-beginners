@@ -19,11 +19,15 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^$', 'students.views.students_list', name='home'),
     url(r'^journal/', 'students.views.journal', name='journal'),
-    url(r'^groups/', 'students.views.groups_list', name='groups'),
+    url(r'^groups/$', 'students.views.groups_list', name='groups'),
 
-    url(r'^students/add$', 'students.views.add_student', name='add_student'),
-    url(r'^students/(?P<sid>\d+)/edit$', 'students.views.edit_student', name='edit_student'),
-    url(r'^students/(?P<sid>\d+)/delete$', 'students.views.delete_student', name='delete_student'),
+    url(r'^students/add$', 'students.views.students_add', name='students_add'),
+    url(r'^students/(?P<sid>\d+)/edit$', 'students.views.students_edit', name='students_edit'),
+    url(r'^students/(?P<sid>\d+)/delete$', 'students.views.students_delete', name='students_delete'),
+
+    url(r'^groups/add$', 'students.views.groups_add', name='groups_add'),
+    url(r'^groups/(?P<gid>\d+)/edit$', 'students.views.groups_edit', name='groups_edit'),
+    url(r'^groups/(?P<gid>\d+)/delete$', 'students.views.groups_delete', name='groups_delete'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
