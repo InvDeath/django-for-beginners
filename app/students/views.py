@@ -8,21 +8,21 @@ def students_list(request):
             'first_name': 'aaa',
             'last_name': 'bbb',
             'ticket': 234,
-            'image': 'img/qeqw.png',
+            'image': 'p.jpg',
         },
         {
             'id': 2,
             'first_name': '333',
             'last_name': 'eee',
             'ticket': 34,
-            'image': 'img/qeqw.png',
+            'image': 'p.jpg',
         },
         {
             'id': 3,
             'first_name': '44',
             'last_name': 'gfgd',
             'ticket': 565,
-            'image': 'img/qeqw.png',
+            'image': 'p.jpg',
         },
     )
 
