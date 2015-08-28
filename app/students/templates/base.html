@@ -15,15 +15,19 @@
 <div class="container">
   <div id="header" class="row">
     <div class="col-xs-8">
-      <h1>Сервіс обліку студентів</h1>
+      {% block logo %}
+        <h1>Сервіс обліку студентів</h1>
+      {% endblock %}
     </div>
     <div id="group-selector" class="col-xs-4">
-      <strong>Група:</strong>
-      <select title="Вибір групи">
-        <option value="">Усі Студенти</option>
-        <option value="">Перша група</option>
-        <option value="">Друга група</option>
-      </select>
+      {% block header_menu %}
+        <strong>Група:</strong>
+        <select title="Вибір групи">
+          <option value="">Усі Студенти</option>
+          <option value="">Перша група</option>
+          <option value="">Друга група</option>
+        </select>
+      {% endblock %}
     </div>
   </div>
   <div id="sub-header" class="row">
@@ -49,7 +53,9 @@
     </div>
   </div>
   <div id="footer" class="row">
-    <div class="col-xs-12">&copy; 2014 Сервіс Обліку Студентів</div>
+    {% block footer %}
+      <div class="col-xs-12">&copy; 2014 Сервіс Обліку Студентів</div>
+    {% endblock %}
   </div>
 </div>
 <!-- Latest compiled and minified JavaScript -->
