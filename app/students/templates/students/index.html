@@ -1,17 +1,8 @@
+{% extends 'layout.html' %}
 {% load staticfiles %}
 
-<!doctype html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Сервіс обліку студентів</title>
-  <meta name="description" content="Система обліку студентів навчального закладу"/>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{% static 'students/main.css' %}">
-</head>
-<body>
-<div class="container">
+{% block content %}
+  <div class="container">
   <div id="header" class="row">
     <div class="col-xs-8">
       <h1>Сервіс обліку студентів</h1>
@@ -361,9 +352,4 @@
     <div class="col-xs-12">&copy; 2014 Сервіс Обліку Студентів</div>
   </div>
 </div>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock %}

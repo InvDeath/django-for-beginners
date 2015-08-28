@@ -1,15 +1,7 @@
-<!doctype html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <title>Сервіс обліку студентів</title>
-  <meta name="description" content="Система обліку студентів навчального закладу"/>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./main.css">
-</head>
-<body>
-<div class="container">
+{% extends 'layout.html' %}
+
+{% block content %}
+  <div class="container">
   <h1>Форма редагування студента</h1>
 
   <form action="#" class="form-horizontal">
@@ -64,8 +56,4 @@
 
   </form>
 </div>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock %}
